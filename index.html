@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>10 Week English Program | 1.5.4 Question Structure: Effective Customer Inquiry</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f1faed',
+                            100: '#d9f0cf',
+                            200: '#b9e2a7',
+                            300: '#8bc975',
+                            400: '#55aa34',
+                            500: '#389d13',
+                            600: '#248700',
+                            700: '#1c6800',
+                            800: '#155000',
+                            900: '#2a2c2e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+<!-- Custom Styles for Flipcards & Print formatting -->
+<style>
+        /* Helvetica is loaded from the user device or an appropriately licensed webfont. */
+        
+        body {
+            font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: #f3f3f3;
+            color: #2a2c2e;
+        }
+
+        /* Perspective for 3D flip card effect */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+        
+        .transform-style-3d {
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .rotate-y-180 {
+            transform: rotateY(180deg);
+        }
+        
+        .backface-hidden {
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        /* Print Media Styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            .print-only {
+                display: block !important;
+            }
+            body {
+                background: white;
+                color: black;
+            }
+            .step-section {
+                display: block !important;
+                page-break-after: always;
+            }
+            .shadow-lg, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1;
+            }
+        }
+
+        .step-section {
+            display: none;
+        }
+
+        .step-section.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        :root { --subject: #248700; --subject-light: #d9f0cf; --ink: #2a2c2e; }
+        /* Master header: deep purple with light-purple controls */
+        .master-header { background:#4b286d !important; color:#ffffff !important; }
+        .master-header h1 { color:#ffffff !important; }
+        .master-header .brand-badge { background:#dbd0e2 !important; color:#4b286d !important; }
+        .master-header .header-meta { color:#e0cdf4 !important; }
+        .master-tabs { background:#dbd0e2 !important; border-color:#ad96bd !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600) { color:#2a2c2e !important; }
+        .master-tabs .nav-tab:not(.bg-brand-600):hover { background:#c8b9d3 !important; color:#2a2c2e !important; }
+        .master-tabs .nav-tab.bg-brand-600 { background:#4b286d !important; color:#fff !important; }
+        .master-header button.bg-brand-600 { background:#dbd0e2 !important; color:#4b286d !important; }
+        .master-header button.bg-brand-600:hover { background:#c8b9d3 !important; }
+        .key-accuracy-rule { background:#f9f1ff !important; border-left-color:#8968a0 !important; color:#4b286d !important; }
+
+        html { font-size: 16px; }
+        body, button, input, textarea, select { font-family: 'Helvetica Now', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
+        button { font-size: 15px; font-weight: 600; }
+        main h2 { font-size: 28px; line-height: 1.25; font-weight: 700; }
+        main h3 { font-size: 22px; line-height: 1.3; font-weight: 600; }
+        main p { line-height: 1.6; }
+        main .text-xs { font-size: 14px; }
+        main .text-sm { font-size: 16px; }
+        main .text-base { font-size: 16px; }
+        main .text-lg { font-size: 18px; }
+        main input, main textarea, main select { background: #fff; color: #2a2c2e; font-size: 16px; }
+        main input:focus, main textarea:focus, main select:focus { outline: 2px solid var(--subject); outline-offset: 2px; }
+        .nav-tab { font-size: 14px; }
+        .nav-tab:focus-visible, button:focus-visible { outline: 3px solid #ad96bd; outline-offset: 2px; }
+        .master-bottom-nav { display:flex; align-items:center; justify-content:space-between; gap:16px; max-width:1152px; margin:0 auto 20px; padding:12px 20px; }
+        .master-bottom-nav button { background:var(--subject); color:white; padding:11px 20px; border-radius:9px; }
+        .master-bottom-nav button:disabled { background:#d9d9d9; color:#54595f; cursor:not-allowed; }
+        #section-progress-label { color:#e2e2e2; font-size:12px; margin-left:12px; white-space:nowrap; }
+        @media (max-width: 768px) { main h2 {font-size:25px;} main h3 {font-size:20px;} .master-bottom-nav {padding:12px;} }
+        @media print { .master-bottom-nav {display:none!important;} .step-section {break-after:auto;page-break-after:auto;} }
+    
+.master-header {background:#248700!important}
+.master-header .brand-badge {background:#d9f0cf!important;color:#1c6800!important}
+.master-header button.bg-brand-600 {background:#d9f0cf!important;color:#1c6800!important}
+.master-header button.bg-brand-600:hover {background:#b9e2a7!important}
+.master-tabs {background:#d9f0cf!important;border-color:#8bc975!important}
+.master-tabs .nav-tab.bg-brand-600 {background:#248700!important;color:#fff!important}
+.master-tabs .nav-tab:not(.bg-brand-600):hover {background:#b9e2a7!important;color:#2a2c2e!important}
+</style>
+<style>
+.action{background:#248700;color:white;border:0;border-radius:10px;padding:11px 18px;font-weight:700;cursor:pointer}.action.secondary{background:#e3f3dc;color:#216c08;border:1px solid #aad49a}.action:hover{filter:brightness(.95)}.objective,.scenario{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:17px}.objective strong{color:#248700}.objective p{margin-top:5px}.roadmap{width:100%;border-collapse:collapse;table-layout:fixed;font-size:16px;color:#475569}.roadmap th{background:#eef2f6;text-align:left;color:#334155;font-weight:700}.roadmap th,.roadmap td{padding:12px;vertical-align:top;border-bottom:1px solid #e2e8f0}.roadmap td:first-child{font-weight:700;color:#1e293b}.roadmap td:nth-child(3){color:#64748b}.roadmap th:nth-child(1){width:19%}.roadmap th:nth-child(2){width:31%}.roadmap th:nth-child(3){width:12%}.roadmap th:nth-child(4){width:38%}.funnel-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}.funnel-stack{display:flex;flex-direction:column;align-items:center;gap:7px}.funnel-level{width:var(--w);background:var(--bg);color:#fff;border:3px solid transparent;min-height:82px;padding:12px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;cursor:pointer;clip-path:polygon(0 0,100% 0,93% 100%,7% 100%);text-align:center}.funnel-level span{font-size:13px}.funnel-level.active{outline:0;filter:drop-shadow(0 0 2px #124f00);border-color:#163e0b}.funnel-level:focus-visible{outline:3px solid #172554;outline-offset:3px}.funnel-detail{background:#f7faf5;border:1px solid #c5dfba;border-radius:12px;padding:20px;min-height:350px}.funnel-detail h4{font-size:20px;font-weight:700;color:#225e0a;margin-bottom:8px}.funnel-detail li{margin:9px 0}.question-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:16px;margin:12px 0}.question-card label{display:block;padding:9px;background:white;border:1px solid #e2e8f0;border-radius:8px;margin-top:7px;cursor:pointer}.question-card input{margin-right:8px;accent-color:#248700}.feedback{margin-top:12px;font-weight:600}.correct{color:#237400}.incorrect{color:#b42318}.scenario h4{font-weight:700;color:#245b0b;margin-bottom:8px}.scenario p{margin:8px 0}#reflection-154 input{accent-color:#248700;margin-right:8px}@media(max-width:760px){.funnel-layout{grid-template-columns:1fr}.roadmap{min-width:720px}.funnel-level{min-height:72px}}@media print{.step-section{display:block!important}.funnel-detail{min-height:0}.action{display:none!important}}
+</style><style>.question-option{display:block;width:100%;text-align:left;border:1px solid #cbd5e1;border-radius:9px;padding:12px;margin:9px 0;background:white}.question-option:hover{background:#e9f7e4}.question-option:disabled{opacity:.7;cursor:default}</style><style>
+.dialogue p{padding:13px 15px;margin:10px 0;border-radius:12px;max-width:94%;line-height:1.55}.customer-line{background:#e9f2ff;border:1px solid #cbdff6}.agent-line{background:#f2f4f6;border:1px solid #e0e5ea;margin-left:auto!important}.escalation{background:#fff0ee!important;border-color:#e9a8a1!important}.structure-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:9px}.structure-choice{padding:14px;background:white;border:1px solid #cbd5e1;border-radius:10px;text-align:left;color:#234a17}.structure-choice.selected{background:#248700;color:white;border-color:#248700}.structure-detail{background:white;border:1px solid #c5dfba;border-radius:12px;padding:18px;margin-top:12px;min-height:180px}.structure-detail h4{font-size:19px;font-weight:700;color:#236a09}.structure-detail p{margin-top:8px}.write-funnel{display:flex;flex-direction:column;align-items:center;gap:9px}.write-level{width:var(--fw);background:var(--fc);padding:15px 22px 22px;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);text-align:center}.write-level label{display:block;color:white;font-size:18px;font-weight:700;margin-bottom:10px}.write-level label small{display:block;font-size:13px;font-weight:400}.write-level textarea{width:88%;min-height:76px;border-radius:9px;border:1px solid #d1d5db;padding:10px;color:#1e293b;resize:vertical}.role-secret{border:2px solid #248700;background:#f2f9ee}.timer-display{font-size:42px;font-weight:800;font-variant-numeric:tabular-nums;color:#248700;margin:12px 0}@media(max-width:650px){.write-level{width:100%!important;clip-path:none;border-radius:10px}.write-level textarea{width:100%}}
+</style></head>
+<body class="min-h-screen flex flex-col">
+<!-- TOP HEADER & NAVIGATION -->
+<header class="master-header bg-[#4b286d] text-white sticky top-0 z-50 shadow-md no-print">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<!-- Branding -->
+<div class="flex items-center space-x-3">
+<div class="brand-badge bg-[#d9f0cf] text-[#248700] font-bold p-2 rounded-lg text-sm tracking-wide">
+                        10W
+                    </div>
+<div>
+<h1 class="font-bold text-lg leading-tight">Lesson 1.5.4: Effective Customer Inquiry</h1>
+<p class="header-meta text-xs font-medium text-[#e2f7da]">10 Week English Program · Day 5 · Grammar · CEFR A2–B1 · 60 min</p>
+</div>
+</div>
+<!-- Print & Export Action -->
+<button class="flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white text-xs sm:text-sm font-semibold py-2 px-3 sm:px-4 rounded-lg transition-colors" onclick="window.print()">
+<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span class="hidden sm:inline">Print / Save PDF</span>
+</button>
+</div>
+</div>
+<!-- Progress Bar -->
+<div aria-label="Lesson section progress" aria-valuemax="7" aria-valuemin="0" aria-valuenow="1" class="w-full bg-[#8bc975] h-1.5" id="progress-track" role="progressbar">
+<div class="bg-brand-500 h-full transition-all duration-300" id="progress-bar" style="width:14.2857%"></div>
+</div>
+<!-- Navigation Tabs -->
+<nav class="master-tabs bg-[#d9f0cf] border-t border-[#8bc975] overflow-x-auto">
+<div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex space-x-1 sm:space-x-2 py-2 text-xs sm:text-sm whitespace-nowrap">
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-white bg-brand-600" id="tab-0" onclick="switchStep(0)">Overview</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-1" onclick="switchStep(1)">1. Encounter (8m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-2" onclick="switchStep(2)">2. Clarify (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-3" onclick="switchStep(3)">3. Remember (12m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-4" onclick="switchStep(4)">4. Internalize (10m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-5" onclick="switchStep(5)">5. Fluent Use (15m)</button>
+<button class="nav-tab px-3 py-1.5 rounded-md font-medium text-slate-300 hover:text-white hover:bg-slate-700" id="tab-6" onclick="switchStep(6)">Reflection</button>
+</div>
+</nav>
+</header>
+<!-- MAIN CONTAINER -->
+<main class="flex-1 max-w-6xl w-full mx-auto p-4 sm:p-6 lg:p-8">
+<!-- STEP 0: OVERVIEW & OBJECTIVES -->
+<section class="step-section active" id="step-0"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><span class="inline-block bg-brand-100 text-brand-800 text-xs px-3 py-1 rounded-full font-semibold uppercase tracking-wide">Lesson 1.5.4 Overview</span><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mt-3 mb-3">Question Structure: Effective Customer Inquiry</h2><p class="text-slate-600 mb-6">Move from A2 yes/no questions to B1 customer discovery. Ask purposeful questions, listen to the answers, and confirm what happened before suggesting a solution.</p><div class="grid md:grid-cols-3 gap-4 mb-8"><div class="objective"><strong>FORM</strong><p>Build accurate yes/no, WH- and polite questions.</p></div><div class="objective"><strong>INVESTIGATE</strong><p>Choose questions that reveal useful information.</p></div><div class="objective"><strong>CONFIRM</strong><p>Summarize a customer's issue accurately.</p></div></div><h3 class="text-xl font-bold mb-3">Lesson Roadmap</h3><div class="overflow-x-auto"><table class="roadmap"><thead><tr><th>Stage</th><th>Focus Area</th><th>Time</th><th>Activity Output</th></tr></thead><tbody><tr><td>Encounter</td><td>Notice missing information</td><td>8 min</td><td>Analyze a failed conversation and repair the agent’s questions</td></tr><tr><td>Clarify</td><td>Question forms and the Question Funnel</td><td>15 min</td><td>Click question structures and funnel stages; answer five cases</td></tr><tr><td>Remember</td><td>Question Builder Challenge</td><td>12 min</td><td>15 automatically checked items</td></tr><tr><td>Internalize</td><td>Practice a question funnel</td><td>10 min</td><td>Write four questions in a collaborative funnel</td></tr><tr><td>Fluent Use</td><td>Customer Detective</td><td>15 min</td><td>Use concealed role briefs and timed investigations</td></tr></tbody></table></div><div class="text-right mt-7"><button class="action" onclick="switchStep(1)">Start Lesson →</button></div></div></section>
+<!-- STEP 1: WARM-UP -->
+<section class="step-section" id="step-1"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm mb-2">Step 1 of 5 · Recommended time: 8 mins</p><h2>Encounter · The Agent Who Didn't Ask Enough</h2><p class="text-slate-600 mb-5">Read the full interaction. Notice how assumptions and repeated solutions make the customer increasingly frustrated.</p><div class="scenario"><h3>Customer Support Chat · Account Access</h3><div class="dialogue" id="bad-dialogue">
+<p class="customer-line"><b>Customer:</b> Hi. I can't access my account, and I need to submit an application today.</p>
+<p class="agent-line"><b>Agent:</b> Reset your password. That usually fixes it.</p>
+<p class="customer-line"><b>Customer:</b> I've already reset it twice. It still doesn't work.</p>
+<p class="agent-line"><b>Agent:</b> Then restart your device and try again.</p>
+<p class="customer-line"><b>Customer:</b> I restarted it this morning. I keep getting an error, and I'm running out of time.</p>
+<p class="agent-line"><b>Agent:</b> You probably entered the wrong password. Please reset it again.</p>
+<p class="customer-line"><b>Customer:</b> That's not what I'm saying! My password works on my phone, but I can't submit the application on my laptop.</p>
+<p class="agent-line"><b>Agent:</b> If your phone works, you should just use that instead.</p>
+<p class="customer-line"><b>Customer:</b> The application form doesn't work properly on my phone. I've explained that I need to finish it on my laptop.</p>
+<p class="agent-line"><b>Agent:</b> You can try again later. There's nothing else I can suggest.</p>
+<p class="customer-line escalation"><b>Customer:</b> I've contacted you for help, and you haven't even asked what error I'm seeing. I've wasted so much time. I want to speak to your supervisor.</p>
+</div></div><div class="scenario mt-5"><h3>Spot the Breakdown</h3><p class="mb-3">Discuss as a class: What did the agent assume? Which details were ignored? At what point did the customer become frustrated?</p><div id="encounter-review"></div><button class="action mt-3" onclick="checkEncounterReview()">Check your analysis</button><p aria-live="polite" class="feedback" id="encounter-review-feedback"></p></div><div class="scenario mt-5"><h3>One Question That Could Have Helped</h3><p>Individually, write one relevant question the agent could have asked to better understand the customer’s problem. You will learn how to build an effective question sequence in Clarify.</p><label class="block font-semibold mt-3" for="repair-open">Your question</label><textarea class="w-full border rounded-lg p-3" id="repair-open" placeholder="What could the agent ask to understand the issue?" rows="2"></textarea></div><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(0)">← Back</button><button class="action" onclick="switchStep(2)">Next section →</button></div></div></section>
+<!-- STEP 2: VOCABULARY LAB -->
+<section class="step-section" id="step-2"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm mb-2">Step 2 of 5 · Recommended time: 15 mins</p><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Clarify · Build Better Questions</h2><p class="text-slate-600 mb-6">Learn the grammar and use the clickable funnel to connect each question to a clear communicative purpose.</p><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">1 · Question Structures</h3><p class="mb-3">Select a grammar pattern to reveal the structure, examples, and a common mistake.</p><div class="structure-grid" id="structure-buttons"></div><div aria-live="polite" class="structure-detail" id="structure-detail"></div></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">2 · The Interactive Question Funnel</h3><p class="mb-4">Click each level. Study its purpose, grammar, examples, and agent tip. A real conversation can move back to earlier levels whenever new information appears.</p><div class="funnel-layout"><div class="funnel-stack"><button class="funnel-level active" data-funnel="0" onclick="funnelSelect(0)" style="--w:100%;--bg:#248700"><b>1 · EXPLORE</b><span>Open-ended questions</span></button><button class="funnel-level" data-funnel="1" onclick="funnelSelect(1)" style="--w:88%;--bg:#369b18"><b>2 · NARROW</b><span>Specific &amp; closed questions</span></button><button class="funnel-level" data-funnel="2" onclick="funnelSelect(2)" style="--w:76%;--bg:#57ac3d"><b>3 · CLARIFY</b><span>Follow-up questions</span></button><button class="funnel-level" data-funnel="3" onclick="funnelSelect(3)" style="--w:64%;--bg:#83c66d"><b>4 · CONFIRM</b><span>Checking understanding</span></button></div><div aria-live="polite" class="funnel-detail" id="funnel-detail"></div></div></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">3 · Choose the Next Question</h3><p class="mb-3">Five customer situations. Select the most useful next question at each stage of the investigation.</p><div id="funnel-practice"></div><div aria-live="polite" class="feedback" id="funnel-practice-feedback"></div></div><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(1)">← Back</button><button class="action" onclick="switchStep(3)">Next section →</button></div></div></section>
+<!-- STEP 3: CONTROLLED PRACTICE -->
+<section class="step-section" id="step-3"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm mb-2">Step 3 of 5 · Recommended time: 12 mins</p><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Remember · Question Builder Challenge</h2><p class="text-slate-600 mb-6">Focus on grammar accuracy, question purpose and responsive follow-up. Each answer has an explanation.</p><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">Part A · Fix the Question (6 items)</h3><p class="mb-3">Choose the grammatically correct version of each customer-service question.</p><div id="remember-a"></div></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">Part B · Ask the Most Useful Question (5 items)</h3><p class="mb-3">Choose the question that helps the agent gather relevant information.</p><div id="remember-b"></div></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">Part C · Listen and Follow Up (4 items)</h3><p class="mb-3">Read the customer’s answer. Select the best next question.</p><div id="remember-c"></div></div><div class="flex gap-3 flex-wrap"><button class="action" onclick="checkRemember()">Check all 15 answers</button><button class="action secondary" onclick="resetRemember()">Reset</button></div><p aria-live="polite" class="feedback" id="remember-score"></p><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(2)">← Back</button><button class="action" onclick="switchStep(4)">Next section →</button></div></div></section>
+<!-- STEP 4: DIALOGUE ANALYSIS -->
+<section class="step-section" id="step-4"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm mb-2">Step 4 of 5 · Recommended time: 10 mins</p><h2>Internalize · Build Your Own Question Funnel</h2><p class="text-slate-600 mb-5">Work with a partner. Analyze the case together and write the questions you would ask at each stage. Then practice the conversation aloud. Your questions should respond to what the customer says.</p><div class="scenario mb-5"><h3>Case File · A Missing Refund</h3><p><b>Customer's opening statement:</b> “I returned an item last week, but I still haven't received my money.”</p><p><b>Your task:</b> Find out what was returned, when and how it was returned, what confirmation the customer received, and what the payment status shows. Do not assume the refund has failed.</p></div><div class="write-funnel" id="write-funnel"><div class="write-level" style="--fw:100%;--fc:#248700"><label for="wf0">1 · EXPLORE <small>Start with an open question</small></label><textarea id="wf0" placeholder="Write your opening question…" rows="2"></textarea></div><div class="write-level" style="--fw:90%;--fc:#369b18"><label for="wf1">2 · NARROW <small>Gather specific facts</small></label><textarea id="wf1" placeholder="Write a targeted question…" rows="2"></textarea></div><div class="write-level" style="--fw:80%;--fc:#57ac3d"><label for="wf2">3 · CLARIFY <small>Ask a responsive follow-up</small></label><textarea id="wf2" placeholder="Write a follow-up question…" rows="2"></textarea></div><div class="write-level" style="--fw:70%;--fc:#83c66d"><label for="wf3">4 · CONFIRM <small>Check your understanding</small></label><textarea id="wf3" placeholder="Write a confirmation question…" rows="2"></textarea></div></div><div class="flex flex-wrap gap-3 mt-5"><button class="action" onclick="reviewWrittenFunnel()">Review My Funnel</button><button class="action secondary" onclick="clearWrittenFunnel()">Clear Questions</button></div><p aria-live="polite" class="feedback" id="written-funnel-feedback"></p><div class="scenario mt-5"><h3>Partner Speaking Check</h3><label class="block"><input type="checkbox"/> We asked an open-ended question without assuming the cause.</label><label class="block"><input type="checkbox"/> We asked relevant factual and follow-up questions.</label><label class="block"><input type="checkbox"/> We confirmed the issue before proposing a solution.</label><p class="text-sm text-slate-600 mt-3">Suggested timing: 2 minutes analyze, 4 minutes write, 3 minutes practice, 1 minute feedback.</p></div><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(3)">← Back</button><button class="action" onclick="switchStep(5)">Next section →</button></div></div></section>
+<!-- STEP 5: SPEAKING SIMULATOR -->
+<section class="step-section" id="step-5"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm mb-2">Step 5 of 5 · Recommended time: 15 mins</p><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">Fluent Use · Customer Detective</h2><p class="text-slate-600 mb-6">Discover the customer’s hidden information through conversation, then confirm the problem.</p><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">Customer Detective · Uncover the Problem</h3><p class="mb-4">Work in pairs. One learner sees the agent brief; the other sees the customer brief. <strong>Do not show your partner your brief.</strong> Ask purposeful questions until you can accurately summarize the problem.</p><div class="flex flex-wrap gap-2 mb-4"><button class="action" onclick="selectCase(0)">Account Access</button><button class="action secondary" onclick="selectCase(1)">Unexpected Charge</button><button class="action secondary" onclick="selectCase(2)">Missing Delivery</button></div><p class="font-bold text-lg mb-3" id="case-title"></p><div class="flex flex-wrap gap-2 mb-3"><button class="action" onclick="selectRole('agent')">Reveal Agent Brief</button><button class="action secondary" onclick="selectRole('customer')">Reveal Customer Brief</button></div><p class="text-sm text-slate-600 mb-3">Only the student playing that role should click Reveal. Hide the brief before passing the screen to your partner.</p><div aria-live="polite" class="scenario role-secret" hidden="" id="role-brief"></div><button class="action secondary mt-3" hidden="" id="hide-role" onclick="hideRole()">Hide Brief Before Switching Partners</button><p class="text-sm text-slate-600 mt-3">Agent: Ask open, targeted, and follow-up questions. Customer: Share information when asked; do not reveal everything immediately.</p></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">Agent Case Notes</h3><p class="mb-2">Record the issue, the key facts you discovered, and your confirmation statement.</p><textarea class="w-full rounded-lg border border-slate-300 p-3" id="case-notes" placeholder="The customer reports… I confirmed that… The next appropriate step is…" rows="4"></textarea><p class="text-sm text-slate-600 mt-3">Success criteria: mostly accurate questions, varied question types, responsive follow-ups, and a clear confirmation of the issue before recommending action.</p></div><div class="scenario mb-5"><h3>Role-play Timer</h3><div aria-live="polite" class="timer-display" id="fluent-timer">05:00</div><div class="flex flex-wrap gap-2"><button class="action" onclick="startFluentTimer()">Start / Resume</button><button class="action secondary" onclick="pauseFluentTimer()">Pause</button><button class="action secondary" onclick="resetFluentTimer()">Reset 5 min</button></div><p class="text-sm text-slate-600 mt-3">Use five minutes per investigation. Reset the timer when students switch roles or cases.</p></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5 mb-5"><h3 class="text-xl font-bold text-slate-900 mb-3">15-Minute Facilitation</h3><p>2 minutes: instructions and role assignment. 5 minutes: first investigation. 5 minutes: switch roles or cases. 3 minutes: feedback and reflection.</p></div><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(4)">← Back</button><button class="action" onclick="switchStep(6)">Next section →</button></div></div></section>
+<!-- STEP 6: FINAL CHALLENGE & REPORT -->
+<section class="step-section" id="step-6"><div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 mb-6"><p class="text-brand-700 font-bold uppercase tracking-wide text-sm">Reflection</p><h2 class="text-2xl sm:text-3xl font-bold text-slate-900 my-3">Check Your Progress</h2><p class="text-slate-600 mb-4">Select what you can do confidently after this lesson.</p><div class="space-y-3" id="reflection-154"><label class="block"><input onchange="reflect154()" type="checkbox"/> I can form accurate yes/no and WH-questions.</label><label class="block"><input onchange="reflect154()" type="checkbox"/> I can select open or closed questions for a purpose.</label><label class="block"><input onchange="reflect154()" type="checkbox"/> I can ask follow-up questions based on an answer.</label><label class="block"><input onchange="reflect154()" type="checkbox"/> I can summarize and confirm a customer's issue.</label></div><p class="feedback" id="reflection-count-154">0 of 4 goals selected.</p><div class="mt-8 flex justify-between"><button class="action secondary" onclick="switchStep(5)">← Back</button><button class="action" onclick="switchStep(0)">Return to Overview</button></div></div></section>
+</main>
+<!-- Master bottom navigation: available on every lesson screen -->
+<div aria-label="Lesson navigation" class="master-bottom-nav no-print">
+<button disabled="" id="previous-section" onclick="switchStep(currentStep154-1)" type="button">← Back</button>
+<span id="bottom-section-label" style="color:#54595f;font-size:14px;font-weight:500">Overview · 1 of 7</span>
+<button id="next-section" onclick="switchStep(currentStep154+1)" type="button">Next →</button>
+</div>
+<!-- FOOTER -->
+<footer class="bg-[#2a2c2e] border-t border-[#54595f] text-slate-400 text-xs py-6 text-center no-print mt-auto">10 Week English Program | Lesson 1.5.4: Question Structure (CEFR A2–B1) · Designed for interactive oral fluency and instructional efficiency.</footer>
+<!-- JAVASCRIPT LOGIC -->
+<script>
+let currentStep154=0;
+function switchStep(n){currentStep154=Math.max(0,Math.min(6,n));document.querySelectorAll('.step-section').forEach((e,i)=>e.classList.toggle('active',i===currentStep154));document.querySelectorAll('.nav-tab').forEach((e,i)=>{const on=i===currentStep154;e.classList.toggle('bg-brand-600',on);e.classList.toggle('text-white',on);e.classList.toggle('text-slate-300',!on);e.classList.toggle('hover:bg-slate-700',!on);});window.scrollTo({top:0,behavior:'smooth'});}
+const funnel=[
+{title:'EXPLORE · Open-ended questions',purpose:'Invite the customer to explain the issue in their own words. Avoid assuming the cause.',grammar:'WH-questions; polite requests with could.',examples:['What seems to be the problem with your account?','Could you walk me through what happened?','How can I help you today?'],tip:'Start broad. Listen without interrupting or suggesting a solution too soon.'},
+{title:'NARROW · Specific and closed questions',purpose:'Establish precise facts, such as timing, device, location, or previous attempts.',grammar:'WH + auxiliary + subject + verb; Do/Does/Did + subject + base verb?',examples:['When did you first notice the issue?','Does the error appear on every device?','Have you tried resetting your password?'],tip:'Use targeted WH-questions and yes/no questions to check facts. Do not ask for details already given.'},
+{title:'CLARIFY · Follow-up questions',purpose:'Resolve ambiguity and investigate a detail that emerged from the customer’s answer.',grammar:'Could you tell me + embedded question (statement word order); WH- and alternative questions.',examples:['When you say it freezes, what exactly happens?','Could you tell me which error message appears?','Does that happen before or after you sign in?'],tip:'Build the next question from the answer you just heard. In “Could you tell me which error message appears?”, do not invert the embedded clause.'},
+{title:'CONFIRM · Checking understanding',purpose:'Summarize the facts and invite correction before recommending the next action.',grammar:'Yes/no confirmation questions; “Just to confirm…” and “So, … correct?”',examples:['So, the issue only happens on your laptop, correct?','Just to confirm, did this start yesterday?','Have I understood the problem correctly?'],tip:'Confirm the issue, not a solution you have not verified. Revisit earlier funnel stages if something remains unclear.'}
+];
+function funnelSelect(i){document.querySelectorAll('.funnel-level').forEach((b,n)=>{b.classList.toggle('active',n===i);b.setAttribute('aria-pressed',String(n===i));});const f=funnel[i];document.getElementById('funnel-detail').innerHTML='<h4>'+f.title+'</h4><p>'+f.purpose+'</p><p class="mt-3"><b>Grammar focus:</b> '+f.grammar+'</p><p class="mt-3 font-bold">Example questions</p><ul class="list-disc pl-5">'+f.examples.map(q=>'<li>'+q+'</li>').join('')+'</ul><p class="mt-3 text-sm"><b>Agent tip:</b> '+f.tip+'</p>';}
+funnelSelect(0);
+const funnelPractice=[
+{q:'Customer: “My payment isn’t going through.” Which question should you ask first?',options:['What happens when you try to make the payment?','Have you tried five different cards?','Your bank must be blocking it, right?'],answer:0,why:'Explore what happens before assuming the cause.'},
+{q:'Customer: “The payment screen says transaction declined.” Which question best narrows the issue?',options:['Do you like shopping online?','Does the same error appear with another payment method?','So your card has been stolen, correct?'],answer:1,why:'Check whether the problem is specific to one payment method.'},
+{q:'Customer: “It only happens when I use the mobile app.” Which follow-up is most useful?',options:['What happens when you try through the website?','Why do you use your phone?','Do you want to cancel your account?'],answer:0,why:'Compare the app with another channel to isolate the issue.'},
+{q:'Customer: “The website works, but the app freezes after I tap Pay.” What should you clarify?',options:['Can I close the case now?','What exactly appears on the screen when it freezes?','Is your favorite color blue?'],answer:1,why:'Clarify the observable behavior and any message shown.'},
+{q:'You have confirmed the app freezes after tapping Pay, while the website accepts payments. Which question checks understanding?',options:['So the payment works on the website but not in the app, correct?','You must have entered your details incorrectly, right?','Why did you not use the website first?'],answer:0,why:'Summarize verified facts without assigning blame or assuming the cause.'}
+];
+function renderMC(container,items,prefix){document.getElementById(container).innerHTML=items.map((q,i)=>'<div class="question-card"><p class="font-bold">'+(i+1)+'. '+q.q+'</p>'+q.options.map((o,j)=>'<label><input type="radio" name="'+prefix+i+'" value="'+j+'">'+o+'</label>').join('')+'<p id="'+prefix+'feedback'+i+'" class="feedback" aria-live="polite"></p></div>').join('');}
+renderMC('funnel-practice',funnelPractice,'fp');document.getElementById('funnel-practice').insertAdjacentHTML('beforeend','<button class="action" onclick="checkFunnelPractice()">Check responses</button>');
+function checkFunnelPractice(){let n=0;funnelPractice.forEach((q,i)=>{const x=document.querySelector('input[name="fp'+i+'"]:checked');const ok=x&&+x.value===q.answer;if(ok)n++;const f=document.getElementById('fpfeedback'+i);f.className='feedback '+(ok?'correct':'incorrect');f.textContent=(ok?'✓ ':'Review: ')+q.why;});document.getElementById('funnel-practice-feedback').textContent='Score: '+n+'/'+funnelPractice.length;}
+const a=[
+['Which question is grammatically correct?',['When did the problem started?','When did the problem start?','When the problem did start?'],1,'After did, use the base verb start.'],
+['Which question is grammatically correct?',['Does the app shows an error?','Do the app show an error?','Does the app show an error?'],2,'Does + subject + base verb.'],
+['Which question is grammatically correct?',['Could you describe what happened?','Could you describes what happened?','Could you to describe what happened?'],0,'Could + subject + base verb.'],
+['Which question is grammatically correct?',['Is the issue still happening?','Does the issue still happening?','The issue is still happening?'],0,'Be + subject + -ing form for a present progressive question.'],
+['Which question is grammatically correct?',['What did happened next?','What happened next?','What was happened next?'],1,'What is the subject of happened, so no did is needed.'],
+['Which polite embedded question is correct?',['Could you tell me where is the order?','Could you tell me where the order is?','Could you tell me where does the order is?'],1,'An embedded question uses statement word order: where the order is.']
+];
+const b=[
+['A customer says “My account is not working.” Which question should you ask first?',['What happens when you try to use your account?','Did you forget your password again?','Can I close this request?'],0,'Explore the situation without assuming a cause.'],
+['The customer says an error appears after checkout. What is most useful?',['Do you like our products?','What does the error message say?','Can you buy a different product?'],1,'Ask for the specific message to understand the issue.'],
+['You need to know whether a refund was already requested.',['Did you submit a refund request?','Why are refunds so complicated?','Would you like to leave a review?'],0,'A closed-ended question verifies a specific fact.'],
+['The customer says “It stopped working last night.” What is most useful?',['Do you have a favorite app?','What were you doing when it stopped working?','Do you want to buy another device?'],1,'This asks for the events surrounding the problem.'],
+['You have gathered all details and want to verify your understanding.',['So the issue began yesterday and only affects your laptop, correct?','I know exactly what caused this.','Why did you wait to contact us?'],0,'A confirmation restates known facts and invites correction.']
+];
+const c=[
+['Customer: “The payment fails only in the mobile app.”',['What happens when you try paying through the website?','Do you prefer shopping in the morning?','Is your delivery address correct?'],0,'A follow-up checks whether the problem is app-specific.'],
+['Customer: “I received a confirmation email, but no order number.”',['What information is shown in the confirmation email?','Do you want promotional messages?','Did you create a new password?'],0,'Ask about the content of the message to investigate further.'],
+['Customer: “The delivery status says complete, but I have nothing.”',['Have you checked your building reception or delivery area?','Do you want to order again immediately?','Can you rate our website?'],0,'Check likely delivery locations before recommending a replacement.'],
+['Customer: “It keeps freezing after I click Submit.”',['What exactly happens on the screen after you click Submit?','Why do you click Submit?','Can I mark the problem as resolved?'],0,'Clarify the observable behavior rather than assuming a cause.']
+];
+const remember=[...a,...b,...c].map(x=>({q:x[0],options:x[1],answer:x[2],why:x[3]}));
+renderMC('remember-a',remember.slice(0,6),'ra');renderMC('remember-b',remember.slice(6,11),'rb');renderMC('remember-c',remember.slice(11),'rc');
+function checkRemember(){let score=0,answered=0;[['ra',remember.slice(0,6)],['rb',remember.slice(6,11)],['rc',remember.slice(11)]].forEach(([p,items])=>items.forEach((q,i)=>{const x=document.querySelector('input[name="'+p+i+'"]:checked');if(x)answered++;const ok=x&&+x.value===q.answer;if(ok)score++;const f=document.getElementById(p+'feedback'+i);f.className='feedback '+(ok?'correct':'incorrect');f.textContent=(ok?'✓ ':'Review: ')+q.why;}));document.getElementById('remember-score').textContent='Score: '+score+'/15 · Answered: '+answered+'/15';}
+function resetRemember(){document.querySelectorAll('#step-3 input[type="radio"]').forEach(x=>x.checked=false);document.querySelectorAll('#step-3 .feedback').forEach(x=>x.textContent='');}
+const cases=[{title:'Account Access',agent:'A customer cannot access an account. Find out when the problem began, what appears on screen, which devices are affected, and what the customer has already tried. Confirm the facts before suggesting a next step.',customer:'You have been unable to sign in since yesterday evening. The password works on your phone but not on your laptop. The laptop says “Browser session expired.” You restarted the laptop but have not cleared the browser cache.'},{title:'Unexpected Charge',agent:'A customer reports an unexpected charge. Find out the amount, date, merchant, transaction status, and recent purchases or renewals. Do not promise a refund before understanding the facts.',customer:'You see two $29.99 charges from the same merchant dated yesterday. One is completed; the other is pending. You renewed a subscription recently and are unsure whether you were charged twice.'},{title:'Missing Delivery',agent:'A customer reports a missing package. Discover the expected date, tracking status, delivery location, and whether someone else could have received it. Confirm the situation before recommending action.',customer:'Your order was expected Tuesday. Tracking shows Delivered at 2:15 p.m., but the package is not at your apartment door. Your building has a reception desk, which you have not checked yet.'}];
+let currentCase=0,currentRole=null;
+function selectCase(i){currentCase=i;document.getElementById('case-title').textContent=cases[i].title;hideRole();document.querySelectorAll('#step-5 button[onclick^="selectCase("]').forEach((b,n)=>{b.classList.toggle('secondary',n!==i);});}
+function selectRole(r){currentRole=r;const b=document.getElementById('role-brief');b.hidden=false;b.innerHTML='<h4>'+(r==='agent'?'Agent Brief':'Customer Brief')+'</h4><p>'+cases[currentCase][r]+'</p>';document.getElementById('hide-role').hidden=false;}
+function hideRole(){currentRole=null;const b=document.getElementById('role-brief');b.hidden=true;b.textContent='';document.getElementById('hide-role').hidden=true;}
+selectCase(0);
+function reflect154(){const xs=[...document.querySelectorAll('#reflection-154 input')];document.getElementById('reflection-count-154').textContent=xs.filter(x=>x.checked).length+' of '+xs.length+' goals selected.';}
+
+// Fixed shared bottom navigation: the original buttons referenced undefined currentStep.
+function switchStep(n){
+ currentStep154=Math.max(0,Math.min(6,n));
+ document.querySelectorAll('.step-section').forEach((e,i)=>e.classList.toggle('active',i===currentStep154));
+ document.querySelectorAll('.nav-tab').forEach((e,i)=>{const on=i===currentStep154;e.classList.toggle('bg-brand-600',on);e.classList.toggle('text-white',on);e.classList.toggle('text-slate-300',!on);e.classList.toggle('hover:bg-slate-700',!on);});
+ const prev=document.getElementById('previous-section'),next=document.getElementById('next-section');
+ prev.disabled=currentStep154===0;next.disabled=currentStep154===6;
+ const names=['Overview','Encounter','Clarify','Remember','Internalize','Fluent Use','Reflection'];
+ document.getElementById('bottom-section-label').textContent=names[currentStep154]+' · '+(currentStep154+1)+' of 7';
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+const structurePatterns=[
+{label:'BE questions',form:'Am / Is / Are + subject + complement?',example:'Is the error message still appearing?',purpose:'Check a condition or current state.',mistake:'Incorrect: Does the screen is frozen? Correct: Is the screen frozen?'},
+{label:'DO / DOES / DID',form:'Do / Does / Did + subject + base verb?',example:'Did you receive the confirmation email?',purpose:'Check a fact, routine, or past action.',mistake:'Incorrect: Did you received the email? Correct: Did you receive the email?'},
+{label:'MODAL questions',form:'Can / Could + subject + base verb?',example:'Could you describe what happens when you click Submit?',purpose:'Ask for information or actions politely.',mistake:'Incorrect: Could you to describe it? Correct: Could you describe it?'},
+{label:'WH + auxiliary',form:'WH-word + auxiliary + subject + main verb?',example:'When did the issue begin?',purpose:'Discover when, where, why, or how something happened.',mistake:'Incorrect: When the issue did begin? Correct: When did the issue begin?'},
+{label:'SUBJECT questions',form:'Who / What + verb (+ complement)?',example:'What happened after you signed in?',purpose:'Ask who or what performed an action.',mistake:'Incorrect: What did happen next? Correct: What happened next? (neutral question)'},
+{label:'EMBEDDED questions',form:'Could you tell me + question word + subject + verb?',example:'Could you tell me where the error appears?',purpose:'Ask for details more politely.',mistake:'Incorrect: Could you tell me where does the error appear? Correct: Could you tell me where the error appears?'}
+];
+function selectStructure(i){document.querySelectorAll('.structure-choice').forEach((b,j)=>{b.classList.toggle('selected',i===j);b.setAttribute('aria-pressed',String(i===j));});const x=structurePatterns[i];document.getElementById('structure-detail').innerHTML='<h4>'+x.label+'</h4><p><b>Structure:</b> '+x.form+'</p><p><b>Example:</b> '+x.example+'</p><p><b>Why use it:</b> '+x.purpose+'</p><p><b>Watch out:</b> '+x.mistake+'</p>';}
+document.getElementById('structure-buttons').innerHTML=structurePatterns.map((x,i)=>'<button class="structure-choice" onclick="selectStructure('+i+')" aria-pressed="false">'+x.label+'</button>').join('');selectStructure(0);
+const reviewItems=[{q:'What is the agent’s biggest mistake?',a:['The agent asks too many questions.','The agent repeatedly suggests solutions without investigating.','The agent summarizes the issue too carefully.'],correct:1,why:'The agent never discovers the error, device difference, or customer goal.'},{q:'What should the agent do when the customer says the password works on the phone?',a:['Ask what happens on the laptop.','Tell the customer to reset the password again.','End the chat immediately.'],correct:0,why:'A relevant follow-up focuses on the device-specific behavior.'}];
+document.getElementById('encounter-review').innerHTML=reviewItems.map((q,i)=>'<div class="question-card"><p><b>'+(i+1)+'. '+q.q+'</b></p>'+q.a.map((a,j)=>'<label><input type="radio" name="review'+i+'" value="'+j+'">'+a+'</label>').join('')+'</div>').join('');
+function checkEncounterReview(){let score=0;reviewItems.forEach((q,i)=>{const x=document.querySelector('input[name="review'+i+'"]:checked');if(x&&Number(x.value)===q.correct)score++;});document.getElementById('encounter-review-feedback').textContent='Score: '+score+'/2. '+reviewItems.map(x=>x.why).join(' ');}
+function toggleRepairExample(){const e=document.getElementById('repair-example');e.hidden=!e.hidden;}
+function reviewWrittenFunnel(){const vals=[0,1,2,3].map(i=>document.getElementById('wf'+i).value.trim());const n=vals.filter(Boolean).length;const qs=vals.filter(Boolean).filter(v=>v.endsWith('?')).length;document.getElementById('written-funnel-feedback').textContent=n+'/4 stages completed; '+qs+' questions end with a question mark. Discuss grammar, relevance, and whether each question follows from the customer’s answer with your partner.';}
+function clearWrittenFunnel(){[0,1,2,3].forEach(i=>document.getElementById('wf'+i).value='');document.getElementById('written-funnel-feedback').textContent='';}
+let fluentSeconds=300,fluentInterval=null;
+function updateFluentTimer(){document.getElementById('fluent-timer').textContent=String(Math.floor(fluentSeconds/60)).padStart(2,'0')+':'+String(fluentSeconds%60).padStart(2,'0');}
+function pauseFluentTimer(){if(fluentInterval!==null){clearInterval(fluentInterval);fluentInterval=null;}}
+function resetFluentTimer(){pauseFluentTimer();fluentSeconds=300;updateFluentTimer();}
+function startFluentTimer(){if(fluentInterval!==null)return;if(fluentSeconds===0)resetFluentTimer();fluentInterval=setInterval(()=>{fluentSeconds=Math.max(0,fluentSeconds-1);updateFluentTimer();if(fluentSeconds===0)pauseFluentTimer();},1000);}
+switchStep(0);
+</script></body>
+</html>
